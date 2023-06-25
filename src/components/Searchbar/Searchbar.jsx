@@ -2,6 +2,7 @@ import { useEffect } from 'react';
 import { useSearchParams } from 'react-router-dom';
 import { FaSearch } from 'react-icons/fa';
 import { Formik, ErrorMessage } from 'formik';
+import PropTypes from 'prop-types';
 import { Button, StyledField, StyledForm } from './Searchbar.styled';
 
 const Searchbar = ({ onQueryChange }) => {
@@ -39,6 +40,10 @@ const Searchbar = ({ onQueryChange }) => {
       </StyledForm>
     </Formik>
   );
+};
+
+Searchbar.propTypes = {
+  onQueryChange: PropTypes.func.isRequired,
 };
 
 export default Searchbar;
