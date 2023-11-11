@@ -28,8 +28,15 @@ export const StyledLink = styled(Link)`
 
 export const MovieContainer = styled.div`
   display: flex;
-  column-gap: 20px;
+  flex-direction: column;
+  row-gap: 20px;
   margin: 15px 0;
+
+  @media screen and (min-width: 768px) {
+    column-gap: 20px;
+    flex-direction: row;
+    row-gap: 0px;
+  }
 `;
 
 export const InfoContainer = styled.div`
